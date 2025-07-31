@@ -1,0 +1,55 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "messages": {
+      "feature": {
+        "content": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "role": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      "_type": "List"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "system_prompt": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "metadata": {
+      "chunk_id": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "data_type": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "source": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "topic": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

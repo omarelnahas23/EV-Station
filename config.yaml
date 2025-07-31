@@ -1,0 +1,8 @@
+domain: 'electric vehicle charging stations'
+use_case: 'QA'
+base_model: 'google/gemma-2-2b-it'
+data_dir: 'data'
+training_data_file: 'data/train_dataset.json'
+eval_data_file: 'data/eval_dataset.json'
+fine_tuned_model_dir: 'models/fine_tuned'
+enable_web_search: true 

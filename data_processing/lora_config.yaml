@@ -1,0 +1,81 @@
+# LoRA/QLoRA Configuration for Llama 3 7B EV Charging Fine-tuning
+
+# Model Configuration
+model_name: "meta-llama/Meta-Llama-3-7B-Instruct"
+base_model: "meta-llama/Meta-Llama-3-7B-Instruct"
+
+# Dataset Configuration
+train_dataset: "data/train_lora.json"
+eval_dataset: "data/eval_lora.json"
+dataset_format: "llama3_chat"
+
+# LoRA Configuration
+lora_config:
+  r: 16                     # LoRA rank
+  lora_alpha: 32           # LoRA alpha scaling
+  target_modules:          # Target modules for LoRA
+    - "q_proj"
+    - "k_proj" 
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+  lora_dropout: 0.1        # LoRA dropout
+  bias: "none"             # Bias type
+  task_type: "CAUSAL_LM"   # Task type
+
+# QLoRA Configuration (4-bit quantization)
+qlora_config:
+  load_in_4bit: true
+  bnb_4bit_use_double_quant: true
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_compute_dtype: "bfloat16"
+
+# Training Configuration
+training_args:
+  output_dir: "../models/llama3-7b-ev-charging-lora"
+  num_train_epochs: 3
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 8
+  learning_rate: 2e-4
+  weight_decay: 0.01
+  warmup_steps: 100
+  logging_steps: 10
+  evaluation_strategy: "steps"
+  eval_steps: 100
+  save_strategy: "steps"
+  save_steps: 500
+  save_total_limit: 3
+  fp16: false
+  bf16: true
+  dataloader_num_workers: 4
+  remove_unused_columns: false
+  group_by_length: true
+  report_to: "wandb"
+  run_name: "llama3-7b-ev-charging-lora"
+
+# Data Processing
+max_seq_length: 2048
+padding_side: "right"
+truncation: true
+
+# Special Tokens
+special_tokens:
+  pad_token: "<|finetune_right_pad_id|>"
+  eos_token: "<|eot_id|>"
+
+# Generation Configuration for Inference
+generation_config:
+  max_new_tokens: 512
+  temperature: 0.7
+  top_p: 0.9
+  do_sample: true
+  repetition_penalty: 1.1
+
+# Hardware Configuration
+hardware:
+  use_gradient_checkpointing: true
+  mixed_precision: "bf16"
+  ddp_find_unused_parameters: false 

@@ -1,0 +1,184 @@
+[
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging."
+      },
+      {
+        "role": "user",
+        "content": "How does workplace charging differ from public charging?"
+      },
+      {
+        "role": "assistant",
+        "content": "Research from Technical University of Munich analyzing public charging station utilization patterns in Hamburg, Germany. The study examines factors influencing charger utilization including location characteristics, time-of-day patterns, and seasonal variations."
+      }
+    ],
+    "text": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nHow does workplace charging differ from public charging?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\nResearch from Technical University of Munich analyzing public charging station utilization patterns in Hamburg, Germany. The study examines factors influencing charger utilization including location characteristics, time-of-day patterns, and seasonal variations.<|eot_id|>",
+    "question": "How does workplace charging differ from public charging?",
+    "answer": "Research from Technical University of Munich analyzing public charging station utilization patterns in Hamburg, Germany. The study examines factors influencing charger utilization including location characteristics, time-of-day patterns, and seasonal variations.",
+    "system_prompt": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.",
+    "metadata": {
+      "source": "Research Literature",
+      "topic": "infrastructure",
+      "data_type": "research_paper",
+      "chunk_id": 0
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging."
+      },
+      {
+        "role": "user",
+        "content": "How does charging time vary for different types of EV charging?"
+      },
+      {
+        "role": "assistant",
+        "content": "Hamburg Public Charging Station Utilization Data Station ID: HH_001 Location: Hamburg Hauptbahnhof Date: 2020-03-15 Time Slot: 08:00-09:00 Utilization Rate: 75. 0% Charging Sessions: 12 Average Duration: 45 minutes Weather: sunny Temperature: 15\u00b0C This data represents real-world public charging station utilization patterns from Hamburg, Germany."
+      }
+    ],
+    "text": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nHow does charging time vary for different types of EV charging?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\nHamburg Public Charging Station Utilization Data Station ID: HH_001 Location: Hamburg Hauptbahnhof Date: 2020-03-15 Time Slot: 08:00-09:00 Utilization Rate: 75. 0% Charging Sessions: 12 Average Duration: 45 minutes Weather: sunny Temperature: 15\u00b0C This data represents real-world public charging station utilization patterns from Hamburg, Germany.<|eot_id|>",
+    "question": "How does charging time vary for different types of EV charging?",
+    "answer": "Hamburg Public Charging Station Utilization Data Station ID: HH_001 Location: Hamburg Hauptbahnhof Date: 2020-03-15 Time Slot: 08:00-09:00 Utilization Rate: 75. 0% Charging Sessions: 12 Average Duration: 45 minutes Weather: sunny Temperature: 15\u00b0C This data represents real-world public charging station utilization patterns from Hamburg, Germany.",
+    "system_prompt": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.",
+    "metadata": {
+      "source": "Hamburg Public Charging (TUM)",
+      "topic": "user_behavior",
+      "data_type": "structured_data",
+      "chunk_id": 0
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging."
+      },
+      {
+        "role": "user",
+        "content": "What are the differences between residential and public charging usage?"
+      },
+      {
+        "role": "assistant",
+        "content": "EV Charging Session Data from ACN-Data Session ID: ACN_001 Site: caltech Station: CT-001 Connection Time: 2023-01-15 08:30:00 Disconnection Time: 2023-01-15 12:45:00 Energy Delivered: 25. 6 kWh This session represents real-world electric vehicle charging behavior at institutional charging facilities. The data includes precise timing information and energy measurements that are crucial for understanding charging patterns, duration preferences, and energy consumption characteristics of EV users."
+      }
+    ],
+    "text": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWhat are the differences between residential and public charging usage?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\nEV Charging Session Data from ACN-Data Session ID: ACN_001 Site: caltech Station: CT-001 Connection Time: 2023-01-15 08:30:00 Disconnection Time: 2023-01-15 12:45:00 Energy Delivered: 25. 6 kWh This session represents real-world electric vehicle charging behavior at institutional charging facilities. The data includes precise timing information and energy measurements that are crucial for understanding charging patterns, duration preferences, and energy consumption characteristics of EV users.<|eot_id|>",
+    "question": "What are the differences between residential and public charging usage?",
+    "answer": "EV Charging Session Data from ACN-Data Session ID: ACN_001 Site: caltech Station: CT-001 Connection Time: 2023-01-15 08:30:00 Disconnection Time: 2023-01-15 12:45:00 Energy Delivered: 25. 6 kWh This session represents real-world electric vehicle charging behavior at institutional charging facilities. The data includes precise timing information and energy measurements that are crucial for understanding charging patterns, duration preferences, and energy consumption characteristics of EV users.",
+    "system_prompt": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.",
+    "metadata": {
+      "source": "ACN-Data (Caltech)",
+      "topic": "user_behavior",
+      "data_type": "structured_data",
+      "chunk_id": 0
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging."
+      },
+      {
+        "role": "user",
+        "content": "What are the differences between residential and public charging usage?"
+      },
+      {
+        "role": "assistant",
+        "content": "DOE EV Data Collection - Charging Session Fleet: Fleet01 Vehicle ID: EV002 Charger ID: CH002 Start Time: 2023-02-01 08:15:00 End Time: 2023-02-01 15:45:00 Energy Consumed: 38. 2 kWh Location Type: Workplace Charger Type: Level 2 This data represents real-world electric vehicle charging patterns collected as part of the Department of Energy's comprehensive EV data collection initiative."
+      }
+    ],
+    "text": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWhat are the differences between residential and public charging usage?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\nDOE EV Data Collection - Charging Session Fleet: Fleet01 Vehicle ID: EV002 Charger ID: CH002 Start Time: 2023-02-01 08:15:00 End Time: 2023-02-01 15:45:00 Energy Consumed: 38. 2 kWh Location Type: Workplace Charger Type: Level 2 This data represents real-world electric vehicle charging patterns collected as part of the Department of Energy's comprehensive EV data collection initiative.<|eot_id|>",
+    "question": "What are the differences between residential and public charging usage?",
+    "answer": "DOE EV Data Collection - Charging Session Fleet: Fleet01 Vehicle ID: EV002 Charger ID: CH002 Start Time: 2023-02-01 08:15:00 End Time: 2023-02-01 15:45:00 Energy Consumed: 38. 2 kWh Location Type: Workplace Charger Type: Level 2 This data represents real-world electric vehicle charging patterns collected as part of the Department of Energy's comprehensive EV data collection initiative.",
+    "system_prompt": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.",
+    "metadata": {
+      "source": "DOE EV Data Collection",
+      "topic": "user_behavior",
+      "data_type": "structured_data",
+      "chunk_id": 0
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging."
+      },
+      {
+        "role": "user",
+        "content": "Which charging connector standards are used in different regions?"
+      },
+      {
+        "role": "assistant",
+        "content": "Electric vehicle charging connectors are standardized interfaces that connect electric vehicles to charging stations. The main types include: Type 1 (SAE J1772): Common in North America and Japan for AC charging up to 7."
+      }
+    ],
+    "text": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWhich charging connector standards are used in different regions?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\nElectric vehicle charging connectors are standardized interfaces that connect electric vehicles to charging stations. The main types include: Type 1 (SAE J1772): Common in North America and Japan for AC charging up to 7.<|eot_id|>",
+    "question": "Which charging connector standards are used in different regions?",
+    "answer": "Electric vehicle charging connectors are standardized interfaces that connect electric vehicles to charging stations. The main types include: Type 1 (SAE J1772): Common in North America and Japan for AC charging up to 7.",
+    "system_prompt": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.",
+    "metadata": {
+      "source": "Domain Expert Content",
+      "topic": "connector_types",
+      "data_type": "educational_content",
+      "chunk_id": 0
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging."
+      },
+      {
+        "role": "user",
+        "content": "What factors influence EV charging behavior?"
+      },
+      {
+        "role": "assistant",
+        "content": "Workplace Charging High-Resolution Session Data Session ID: WP_001 Facility: FAC_A Station: STA_001 User Type: manager Adoption Stage: early_adopter Session Duration: 4. 2 hours Energy Consumed: 22. 5 kWh Session Cost: $3. 50 Vehicle Type: sedan Commute Distance: 25 miles Pricing Model: paid This workplace charging data represents detailed analysis from 105 charging stations across 25 corporate facilities with 3,395 real-time transactions."
+      }
+    ],
+    "text": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWhat factors influence EV charging behavior?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\nWorkplace Charging High-Resolution Session Data Session ID: WP_001 Facility: FAC_A Station: STA_001 User Type: manager Adoption Stage: early_adopter Session Duration: 4. 2 hours Energy Consumed: 22. 5 kWh Session Cost: $3. 50 Vehicle Type: sedan Commute Distance: 25 miles Pricing Model: paid This workplace charging data represents detailed analysis from 105 charging stations across 25 corporate facilities with 3,395 real-time transactions.<|eot_id|>",
+    "question": "What factors influence EV charging behavior?",
+    "answer": "Workplace Charging High-Resolution Session Data Session ID: WP_001 Facility: FAC_A Station: STA_001 User Type: manager Adoption Stage: early_adopter Session Duration: 4. 2 hours Energy Consumed: 22. 5 kWh Session Cost: $3. 50 Vehicle Type: sedan Commute Distance: 25 miles Pricing Model: paid This workplace charging data represents detailed analysis from 105 charging stations across 25 corporate facilities with 3,395 real-time transactions.",
+    "system_prompt": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.",
+    "metadata": {
+      "source": "Workplace Charging Dataset (Georgia Tech)",
+      "topic": "user_behavior",
+      "data_type": "structured_data",
+      "chunk_id": 0
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging."
+      },
+      {
+        "role": "user",
+        "content": "How does charging station utilization vary by location?"
+      },
+      {
+        "role": "assistant",
+        "content": "This dataset comprises 441,077 charging transactions collected from 13 charging stations in China over a 2-year period. The dataset includes detailed charging transaction times, prices, charging status, termination reasons, and weather data for each session."
+      }
+    ],
+    "text": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nHow does charging station utilization vary by location?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\nThis dataset comprises 441,077 charging transactions collected from 13 charging stations in China over a 2-year period. The dataset includes detailed charging transaction times, prices, charging status, termination reasons, and weather data for each session.<|eot_id|>",
+    "question": "How does charging station utilization vary by location?",
+    "answer": "This dataset comprises 441,077 charging transactions collected from 13 charging stations in China over a 2-year period. The dataset includes detailed charging transaction times, prices, charging status, termination reasons, and weather data for each session.",
+    "system_prompt": "You are an expert on electric vehicle charging technology and infrastructure. Provide accurate, detailed, and helpful information about EV charging.",
+    "metadata": {
+      "source": "Research Literature",
+      "topic": "infrastructure",
+      "data_type": "research_paper",
+      "chunk_id": 0
+    }
+  }
+]

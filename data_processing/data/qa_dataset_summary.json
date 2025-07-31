@@ -1,0 +1,25 @@
+{
+  "total_qa_pairs": 61,
+  "train_samples": 54,
+  "eval_samples": 7,
+  "topics_covered": {
+    "infrastructure": 13,
+    "user_behavior": 33,
+    "connector_types": 7,
+    "charging_levels": 4,
+    "smart_charging": 4
+  },
+  "sources_used": {
+    "Research Literature": 9,
+    "DOE EV Data Collection": 6,
+    "Chinese High-Resolution Dataset (SEU)": 6,
+    "Domain Expert Content": 12,
+    "Specialized QA Generation": 4,
+    "ACN-Data (Caltech)": 6,
+    "NREL Alternative Fuel Stations": 6,
+    "Hamburg Public Charging (TUM)": 6,
+    "Workplace Charging Dataset (Georgia Tech)": 6
+  },
+  "avg_question_length": 58.67213114754098,
+  "avg_answer_length": 341.1967213114754
+}

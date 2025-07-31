@@ -1,0 +1,239 @@
+[
+  {
+    "text": "EV Charging Session Data from ACN-Data Session ID: ACN_001 Site: caltech Station: CT-001 Connection Time: 2023-01-15 08:30:00 Disconnection Time: 2023-01-15 12:45:00 Energy Delivered: 25.6 kWh This session represents real-world electric vehicle charging behavior at institutional charging facilities. The data includes precise timing information and energy measurements that are crucial for understanding charging patterns, duration preferences, and energy consumption characteristics of EV users.",
+    "metadata": {
+      "source": "ACN-Data (Caltech)",
+      "type": "structured_data",
+      "dataset_type": "charging_transactions",
+      "session_id": "ACN_001",
+      "energy_kwh": 25.6,
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "EV Charging Session Data from ACN-Data Session ID: ACN_002 Site: caltech Station: CT-002 Connection Time: 2023-01-15 09:15:00 Disconnection Time: 2023-01-15 11:30:00 Energy Delivered: 18.3 kWh This session represents real-world electric vehicle charging behavior at institutional charging facilities. The data includes precise timing information and energy measurements that are crucial for understanding charging patterns, duration preferences, and energy consumption characteristics of EV users.",
+    "metadata": {
+      "source": "ACN-Data (Caltech)",
+      "type": "structured_data",
+      "dataset_type": "charging_transactions",
+      "session_id": "ACN_002",
+      "energy_kwh": 18.3,
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "DOE EV Data Collection - Charging Session Fleet: Fleet01 Vehicle ID: EV001 Charger ID: CH001 Start Time: 2023-02-01 07:45:00 End Time: 2023-02-01 16:30:00 Energy Consumed: 42.5 kWh Location Type: Workplace Charger Type: Level 2 This data represents real-world electric vehicle charging patterns collected as part of the Department of Energy's comprehensive EV data collection initiative. The data provides insights into workplace charging behavior, energy consumption patterns, and infrastructure utilization across different fleet operations and charging scenarios.",
+    "metadata": {
+      "source": "DOE EV Data Collection",
+      "type": "structured_data",
+      "dataset_type": "fleet_charging",
+      "vehicle_id": "EV001",
+      "location_type": "Workplace",
+      "energy_kwh": 42.5,
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "DOE EV Data Collection - Charging Session Fleet: Fleet01 Vehicle ID: EV002 Charger ID: CH002 Start Time: 2023-02-01 08:15:00 End Time: 2023-02-01 15:45:00 Energy Consumed: 38.2 kWh Location Type: Workplace Charger Type: Level 2 This data represents real-world electric vehicle charging patterns collected as part of the Department of Energy's comprehensive EV data collection initiative. The data provides insights into workplace charging behavior, energy consumption patterns, and infrastructure utilization across different fleet operations and charging scenarios.",
+    "metadata": {
+      "source": "DOE EV Data Collection",
+      "type": "structured_data",
+      "dataset_type": "fleet_charging",
+      "vehicle_id": "EV002",
+      "location_type": "Workplace",
+      "energy_kwh": 38.2,
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Alternative Fuel Station Information Station Name: Tesla Supercharger - Downtown Location: Los Angeles, CA Fuel Type: ELEC Connector Types: Tesla, CCS, CHAdeMO Access: Public This station provides electric vehicle charging infrastructure as part of the growing network of alternative fuel stations across the United States. The station supports multiple connector types to accommodate different electric vehicle models and provides public access to support the adoption of electric vehicles and sustainable transportation. Key features include: - Multiple charging connector compatibility - Public accessibility - Strategic location for urban charging needs - Integration with national charging networks",
+    "metadata": {
+      "source": "NREL Alternative Fuel Stations",
+      "type": "structured_data",
+      "dataset_type": "station_locations",
+      "station_name": "Tesla Supercharger - Downtown",
+      "city": "Los Angeles",
+      "state": "CA",
+      "fuel_type": "ELEC",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Alternative Fuel Station Information Station Name: ChargePoint Network Station Location: San Francisco, CA Fuel Type: ELEC Connector Types: J1772, CCS Access: Public This station provides electric vehicle charging infrastructure as part of the growing network of alternative fuel stations across the United States. The station supports multiple connector types to accommodate different electric vehicle models and provides public access to support the adoption of electric vehicles and sustainable transportation. Key features include: - Multiple charging connector compatibility - Public accessibility - Strategic location for urban charging needs - Integration with national charging networks",
+    "metadata": {
+      "source": "NREL Alternative Fuel Stations",
+      "type": "structured_data",
+      "dataset_type": "station_locations",
+      "station_name": "ChargePoint Network Station",
+      "city": "San Francisco",
+      "state": "CA",
+      "fuel_type": "ELEC",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Hamburg Public Charging Station Utilization Data Station ID: HH_001 Location: Hamburg Hauptbahnhof Date: 2020-03-15 Time Slot: 08:00-09:00 Utilization Rate: 75.0% Charging Sessions: 12 Average Duration: 45 minutes Weather: sunny Temperature: 15\u00b0C This data represents real-world public charging station utilization patterns from Hamburg, Germany. The dataset provides insights into European urban charging behavior, temporal usage patterns, and environmental factors affecting charging infrastructure utilization. This is valuable for understanding public charging dynamics in dense urban environments and supports infrastructure planning for European cities with high EV adoption rates.",
+    "metadata": {
+      "source": "Hamburg Public Charging (TUM)",
+      "type": "structured_data",
+      "dataset_type": "public_utilization",
+      "station_id": "HH_001",
+      "location": "Hamburg Hauptbahnhof",
+      "utilization_rate": 0.75,
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Hamburg Public Charging Station Utilization Data Station ID: HH_002 Location: Hamburg Altona Date: 2020-03-15 Time Slot: 12:00-13:00 Utilization Rate: 88.0% Charging Sessions: 18 Average Duration: 52 minutes Weather: cloudy Temperature: 12\u00b0C This data represents real-world public charging station utilization patterns from Hamburg, Germany. The dataset provides insights into European urban charging behavior, temporal usage patterns, and environmental factors affecting charging infrastructure utilization. This is valuable for understanding public charging dynamics in dense urban environments and supports infrastructure planning for European cities with high EV adoption rates.",
+    "metadata": {
+      "source": "Hamburg Public Charging (TUM)",
+      "type": "structured_data",
+      "dataset_type": "public_utilization",
+      "station_id": "HH_002",
+      "location": "Hamburg Altona",
+      "utilization_rate": 0.88,
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Chinese High-Resolution EV Charging Transaction Transaction ID: CN_TX_001 Station ID: JX_ST_001 Start Time: 2022-05-10 14:30:15 End Time: 2022-05-10 16:45:30 Energy Delivered: 35.2 kWh Charging Price: \u00a51.2 per kWh Termination Reason: user_stop Weather: rain Temperature: 22\u00b0C Humidity: 85% Station Type: urban This transaction data comes from a comprehensive Chinese EV charging dataset with 441,077 charging transactions from 13 stations over 2 years in Jiaxing, China. The dataset includes detailed weather correlations, failure analysis, and multi-dimensional behavioral features. This enables analysis of charging patterns in Chinese urban environments, weather impacts on charging behavior, and infrastructure reliability in high-density usage scenarios.",
+    "metadata": {
+      "source": "Chinese High-Resolution Dataset (SEU)",
+      "type": "structured_data",
+      "dataset_type": "weather_correlated_charging",
+      "transaction_id": "CN_TX_001",
+      "station_type": "urban",
+      "termination_reason": "user_stop",
+      "weather": "rain",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Chinese High-Resolution EV Charging Transaction Transaction ID: CN_TX_002 Station ID: JX_ST_002 Start Time: 2022-05-10 09:15:45 End Time: 2022-05-10 10:30:20 Energy Delivered: 28.7 kWh Charging Price: \u00a51.15 per kWh Termination Reason: full_charge Weather: sunny Temperature: 25\u00b0C Humidity: 60% Station Type: suburban This transaction data comes from a comprehensive Chinese EV charging dataset with 441,077 charging transactions from 13 stations over 2 years in Jiaxing, China. The dataset includes detailed weather correlations, failure analysis, and multi-dimensional behavioral features. This enables analysis of charging patterns in Chinese urban environments, weather impacts on charging behavior, and infrastructure reliability in high-density usage scenarios.",
+    "metadata": {
+      "source": "Chinese High-Resolution Dataset (SEU)",
+      "type": "structured_data",
+      "dataset_type": "weather_correlated_charging",
+      "transaction_id": "CN_TX_002",
+      "station_type": "suburban",
+      "termination_reason": "full_charge",
+      "weather": "sunny",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Workplace Charging High-Resolution Session Data Session ID: WP_001 Facility: FAC_A Station: STA_001 User Type: manager Adoption Stage: early_adopter Session Duration: 4.2 hours Energy Consumed: 22.5 kWh Session Cost: $3.50 Vehicle Type: sedan Commute Distance: 25 miles Pricing Model: paid This workplace charging data represents detailed analysis from 105 charging stations across 25 corporate facilities with 3,395 real-time transactions. The dataset enables user segmentation analysis including manager vs non-manager behavior, early vs late adopter patterns, and the impact of pricing models on charging behavior. This is crucial for optimizing workplace charging infrastructure and developing effective employee EV programs.",
+    "metadata": {
+      "source": "Workplace Charging Dataset (Georgia Tech)",
+      "type": "structured_data",
+      "dataset_type": "workplace_segmentation",
+      "session_id": "WP_001",
+      "user_type": "manager",
+      "adoption_stage": "early_adopter",
+      "pricing_model": "paid",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Workplace Charging High-Resolution Session Data Session ID: WP_002 Facility: FAC_B Station: STA_015 User Type: non_manager Adoption Stage: late_adopter Session Duration: 2.8 hours Energy Consumed: 18.3 kWh Session Cost: $0.00 Vehicle Type: suv Commute Distance: 15 miles Pricing Model: free This workplace charging data represents detailed analysis from 105 charging stations across 25 corporate facilities with 3,395 real-time transactions. The dataset enables user segmentation analysis including manager vs non-manager behavior, early vs late adopter patterns, and the impact of pricing models on charging behavior. This is crucial for optimizing workplace charging infrastructure and developing effective employee EV programs.",
+    "metadata": {
+      "source": "Workplace Charging Dataset (Georgia Tech)",
+      "type": "structured_data",
+      "dataset_type": "workplace_segmentation",
+      "session_id": "WP_002",
+      "user_type": "non_manager",
+      "adoption_stage": "late_adopter",
+      "pricing_model": "free",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "This study presents a high-resolution dataset of real-time EV charging transactions resolved to the nearest second over a one-year period at a multi-site corporate campus. The dataset includes 105 charging stations across 25 different facilities with 3,395 real-time transactions and 85 users with both paid and free sessions. Key findings include: - Charging duration averages 2.88 hours - Significant differences between casual and habitual users - Early adopters vs late adopters show different behavior patterns - Manager vs non-manager usage patterns differ significantly The data reveals important insights about workplace charging behavior, user segmentation, and infrastructure utilization patterns that are crucial for planning and optimizing electric vehicle charging infrastructure deployment.",
+    "metadata": {
+      "source": "Research Literature",
+      "type": "research_paper",
+      "title": "Electric vehicle charging stations in the workplace with high-resolution data",
+      "dataset_type": "academic_research",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "This dataset comprises 441,077 charging transactions collected from 13 charging stations in China over a 2-year period. The dataset includes detailed charging transaction times, prices, charging status, termination reasons, and weather data for each session. Key characteristics: - High temporal resolution (second-level precision) - Weather correlation data included - Failure analysis capabilities - Multi-dimensional user behavior features - Real-world operational data from urban and suburban locations The dataset enables analysis of charging behavior patterns, infrastructure reliability, weather impacts on charging, and user preferences across different charging scenarios. Applications include load forecasting, infrastructure planning, and policy development.",
+    "metadata": {
+      "source": "Research Literature",
+      "type": "research_paper",
+      "title": "A high-resolution electric vehicle charging transaction dataset from China",
+      "dataset_type": "academic_research",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Research from Technical University of Munich analyzing public charging station utilization patterns in Hamburg, Germany. The study examines factors influencing charger utilization including location characteristics, time-of-day patterns, and seasonal variations. Key insights: - Urban locations show higher utilization rates than suburban - Peak usage occurs during commuting hours and shopping periods - Weather conditions significantly impact charging behavior - Station accessibility features affect usage patterns This European perspective provides valuable insights for public charging infrastructure planning in dense urban environments with high EV adoption rates.",
+    "metadata": {
+      "source": "Research Literature",
+      "type": "research_paper",
+      "title": "Hamburg Public Charging Station Utilization Analysis",
+      "dataset_type": "academic_research",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Electric vehicle charging connectors are standardized interfaces that connect electric vehicles to charging stations. The main types include: Type 1 (SAE J1772): Common in North America and Japan for AC charging up to 7.4kW Type 2 (IEC 62196): European standard for AC charging up to 22kW CHAdeMO: Japanese DC fast charging standard up to 50kW+ CCS (Combined Charging System): Combines AC and DC charging in one connector Tesla Supercharger: Proprietary Tesla standard for high-speed DC charging GB/T: Chinese national standard for both AC and DC charging Connector compatibility is crucial for interoperability between vehicles and charging infrastructure. Different regions have adopted different standards, creating challenges for international EV adoption.",
+    "metadata": {
+      "source": "Domain Expert Content",
+      "type": "educational_content",
+      "topic": "EV Charging Connector Types and Standards",
+      "dataset_type": "domain_knowledge",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Electric vehicle charging is categorized into three main levels based on power output: Level 1 Charging (AC): 120V household outlet, 1.4kW, 8-20 hours for full charge Level 2 Charging (AC): 240V, 3.7-22kW, 3-8 hours for full charge Level 3 Charging (DC): Direct current fast charging, 50-350kW, 20-60 minutes for 80% charge Charging time depends on: - Battery capacity (kWh) - Current state of charge - Maximum charging rate of vehicle - Ambient temperature - Battery management system limitations Fast charging is typically limited to 80% capacity to protect battery life.",
+    "metadata": {
+      "source": "Domain Expert Content",
+      "type": "educational_content",
+      "topic": "EV Charging Power Levels and Charging Times",
+      "dataset_type": "domain_knowledge",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Smart charging systems optimize when and how electric vehicles charge to benefit both users and the grid: Time-of-Use Pricing: Charging during off-peak hours reduces costs and grid stress Load Balancing: Distributing charging across multiple vehicles to prevent grid overload Vehicle-to-Grid (V2G): EVs can supply power back to the grid during peak demand Renewable Integration: Charging when solar/wind generation is high Demand Response: Adjusting charging rates based on grid conditions Smart charging requires communication between vehicles, chargers, and grid operators. This enables optimal energy management and supports grid stability with high EV adoption.",
+    "metadata": {
+      "source": "Domain Expert Content",
+      "type": "educational_content",
+      "topic": "Smart Charging and Grid Integration",
+      "dataset_type": "domain_knowledge",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  },
+  {
+    "text": "Strategic placement of EV charging infrastructure requires consideration of: Location Factors: - High traffic areas and destinations - Workplace and residential charging needs - Highway corridors for long-distance travel - Shopping centers and entertainment venues Technical Requirements: - Electrical grid capacity and upgrades needed - Power distribution and transformer sizing - Network connectivity for payment and monitoring - Accessibility and ADA compliance Economic Considerations: - Capital costs for equipment and installation - Ongoing operational and maintenance costs - Revenue models and pricing strategies - Government incentives and funding programs Proper planning ensures adequate coverage while maximizing utilization and return on investment.",
+    "metadata": {
+      "source": "Domain Expert Content",
+      "type": "educational_content",
+      "topic": "Charging Infrastructure Planning and Deployment",
+      "dataset_type": "domain_knowledge",
+      "chunk_id": 0,
+      "total_chunks": 1
+    }
+  }
+]

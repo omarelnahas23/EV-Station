@@ -1,0 +1,24 @@
+{
+  "total_items": 29,
+  "sources": {
+    "ACN-Data (Caltech)": 2,
+    "DOE EV Data Collection": 2,
+    "NREL Alternative Fuel Stations": 2,
+    "Hamburg Public Charging (TUM)": 2,
+    "Chinese High-Resolution Dataset (SEU)": 2,
+    "Workplace Charging Dataset (Georgia Tech)": 2,
+    "Research Literature": 3,
+    "IEA Global EV Outlook 2023": 1,
+    "Mozilla PDF.js Test": 1,
+    "Wikipedia - EV Charging": 1,
+    "Wikipedia - Charging Station": 1,
+    "Wikipedia - EVSE": 1,
+    "Wikipedia - CHAdeMO": 1,
+    "Wikipedia - CCS": 1,
+    "Wikipedia - SAE J1772": 1,
+    "Wikipedia - Tesla Supercharger": 1,
+    "PDF - pdf-test.pdf": 1,
+    "Domain Expert Content": 4
+  },
+  "collection_timestamp": "2025-08-01 01:46:55"
+}
