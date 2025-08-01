@@ -441,10 +441,6 @@ docker run -p 8000:8000 ev-charging-llm
 - **Google Cloud**: Vertex AI deployment
 - **Azure**: Azure Machine Learning deployment
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
 ### Development Setup
 
 1. **Fork the repository**
