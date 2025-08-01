@@ -171,7 +171,7 @@ EV-Station/
 ├── 📄 requirements-dev.txt   # Development dependencies
 ├── 📄 .gitignore             # Git ignore patterns
 ├── 📄 LICENSE                # MIT License
-├── 📄 CHANGELOG.md           # Version history
+
 
 └── 📄 README.md              # This file
 ```
