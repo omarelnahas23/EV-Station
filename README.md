@@ -177,6 +177,172 @@ enable_pdf_download: true
 enable_api_collection: true
 ```
 
+## 🧠 Prompting Strategy & Code Generation Approach
+
+### Prompt Engineering for EV Charging Domain
+
+Our approach to prompting code generation tools follows a structured methodology optimized for the electric vehicle charging domain:
+
+#### **1. Prompt Structure Design**
+
+**Hierarchical Prompt Architecture:**
+```python
+# System Prompt Template
+SYSTEM_PROMPT = """
+You are an expert in electric vehicle charging technology and infrastructure.
+Provide accurate, technical, and helpful information about:
+- EV charging standards (CHAdeMO, CCS, J1772, Tesla)
+- Charging infrastructure planning and deployment
+- Smart charging and grid integration
+- User behavior and adoption patterns
+"""
+
+# Context-Question Format
+PROMPT_TEMPLATE = """
+Context: {domain_context}
+
+Question: {user_question}
+
+Instructions:
+- Provide technically accurate information
+- Include relevant standards and specifications
+- Consider safety and compliance aspects
+- Explain complex concepts clearly
+```
+
+#### **2. Long Context Handling Strategies**
+
+**Context Window Management:**
+- **Chunking Strategy**: Split long documents into 512-token chunks with 50-token overlap
+- **Relevance Filtering**: Use semantic similarity to select most relevant context chunks
+- **Context Compression**: Summarize non-essential background information
+- **Multi-turn Conversations**: Maintain context across multiple exchanges using conversation history
+
+**Implementation Example:**
+```python
+def handle_long_context(context, question, max_length=2048):
+    """Handle contexts longer than model's context window."""
+    if len(context) <= max_length:
+        return context
+    
+    # Chunk and rank by relevance to question
+    chunks = chunk_text(context, chunk_size=512, overlap=50)
+    relevant_chunks = rank_chunks_by_relevance(chunks, question)
+    
+    # Select top chunks that fit within context window
+    selected_context = ""
+    for chunk in relevant_chunks:
+        if len(selected_context + chunk) <= max_length:
+            selected_context += chunk + "\n\n"
+        else:
+            break
+    
+    return selected_context
+```
+
+#### **3. Domain-Specific Prompt Optimization**
+
+**EV Charging Knowledge Integration:**
+- **Technical Accuracy**: Prompts include domain-specific terminology and standards
+- **Safety Considerations**: Always emphasize electrical safety and compliance
+- **Multi-perspective Responses**: Address both technical and user experience aspects
+- **Standard References**: Include relevant industry standards (IEEE, SAE, IEC)
+
+**Example Domain-Optimized Prompts:**
+```python
+# For connector compatibility questions
+CONNECTOR_PROMPT = """
+Context: {charging_infrastructure_data}
+
+Question: {connector_question}
+
+Response Guidelines:
+1. Identify specific connector standards mentioned
+2. Explain compatibility between vehicle and charger
+3. Mention power ratings and charging speeds
+4. Include safety considerations
+5. Reference relevant standards (SAE J1772, IEC 62196, etc.)
+"""
+
+# For infrastructure planning questions
+PLANNING_PROMPT = """
+Context: {location_and_usage_data}
+
+Question: {planning_question}
+
+Analysis Framework:
+1. Location Analysis: traffic patterns, demographics, existing infrastructure
+2. Technical Requirements: grid capacity, power distribution, permits
+3. Economic Factors: installation costs, operational expenses, revenue models
+4. Regulatory Compliance: building codes, utility requirements, accessibility
+"""
+```
+
+#### **4. Code Generation Tool Integration**
+
+**Multi-Model Approach:**
+- **Base Model**: Llama 3 7B for general EV charging knowledge
+- **Specialized Models**: Domain-specific fine-tuned models for technical queries
+- **Retrieval Augmentation**: Combine LLM responses with real-time data lookup
+
+**Tool Chain Integration:**
+```python
+class EVChargingAssistant:
+    def __init__(self):
+        self.base_model = load_base_model()
+        self.fine_tuned_model = load_domain_model()
+        self.knowledge_base = load_ev_knowledge_base()
+    
+    def generate_response(self, question, context=None):
+        # 1. Route question to appropriate model
+        if self.is_technical_query(question):
+            model = self.fine_tuned_model
+        else:
+            model = self.base_model
+        
+        # 2. Retrieve relevant context
+        if not context:
+            context = self.knowledge_base.retrieve(question)
+        
+        # 3. Handle long context
+        processed_context = self.handle_long_context(context, question)
+        
+        # 4. Generate structured prompt
+        prompt = self.build_prompt(question, processed_context)
+        
+        # 5. Generate and validate response
+        response = model.generate(prompt)
+        return self.validate_response(response, question)
+```
+
+#### **5. Quality Assurance & Validation**
+
+**Response Validation Pipeline:**
+- **Technical Accuracy Check**: Verify against domain knowledge base
+- **Safety Validation**: Ensure electrical safety guidelines are followed
+- **Completeness Assessment**: Check if response addresses all aspects of question
+- **Clarity Evaluation**: Assess understandability for target audience
+
+**Continuous Improvement:**
+- **Feedback Loop**: Collect user feedback to refine prompts
+- **A/B Testing**: Test different prompt structures for effectiveness
+- **Performance Monitoring**: Track response quality metrics
+- **Domain Knowledge Updates**: Regular updates to reflect industry changes
+
+#### **6. Handling Domain-Specific Challenges**
+
+**Technical Complexity Management:**
+- **Layered Explanations**: Provide both high-level and detailed technical information
+- **Visual Aid Integration**: Reference diagrams and technical drawings when relevant
+- **Standard Compliance**: Always validate responses against current industry standards
+
+**Real-world Application Focus:**
+- **Practical Implementation**: Include installation and operational considerations
+- **Cost-Benefit Analysis**: Provide economic context for recommendations
+- **Regional Variations**: Account for different standards and regulations globally
+
+This structured approach ensures that our LLM generates accurate, helpful, and technically sound responses for electric vehicle charging domain questions while effectively managing long contexts and complex technical information.
+
 ### Training Configuration (`data_processing/lora_config.yaml`)
 
 ```yaml
