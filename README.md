@@ -539,25 +539,6 @@ pytest tests/
 3. **Model Loading**: Slow model loading times
    - **Solution**: Use local model cache or faster storage
 
-## 🗺️ Roadmap
-
-### Version 1.1 (Next Release)
-- [ ] Support for Llama 3.1 models
-- [ ] Multi-GPU training support
-- [ ] Enhanced evaluation metrics
-- [ ] Web interface for model interaction
-
-### Version 1.2 (Future)
-- [ ] Support for additional model architectures
-- [ ] Real-time data collection pipeline
-- [ ] Advanced prompt engineering techniques
-- [ ] Mobile app deployment
-
-### Version 2.0 (Long-term)
-- [ ] Multi-modal support (images, diagrams)
-- [ ] Federated learning capabilities
-- [ ] Advanced reasoning and planning
-- [ ] Integration with EV charging networks
 
 ## 📄 License
 
