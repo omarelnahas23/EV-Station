@@ -172,7 +172,7 @@ EV-Station/
 ├── 📄 .gitignore             # Git ignore patterns
 ├── 📄 LICENSE                # MIT License
 ├── 📄 CHANGELOG.md           # Version history
-├── 📄 CONTRIBUTING.md        # Contribution guidelines
+
 └── 📄 README.md              # This file
 ```
 

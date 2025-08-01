@@ -687,12 +687,12 @@ After completing this guide, you might want to:
 2. **Add multimodal capabilities** (images, diagrams)
 3. **Implement retrieval-augmented generation** (RAG)
 4. **Deploy to production** with proper monitoring and scaling
-5. **Contribute to the project** by adding new features or data sources
+
 
 For more information, see:
 - [API Reference](api_reference.md)
 - [Data Sources Documentation](data_sources.md)
-- [Contributing Guidelines](../CONTRIBUTING.md)
+
 
 ---
 
