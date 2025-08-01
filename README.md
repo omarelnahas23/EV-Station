@@ -7,7 +7,6 @@
 
 A comprehensive pipeline for collecting, processing, and fine-tuning large language models (LLMs) on electric vehicle (EV) charging domain data. This project enables the creation of domain-specific AI assistants with expertise in EV charging technology, infrastructure, and user behavior.
 
-## 🆕 Latest Updates
 
 ### MLOps & CI/CD Implementation
 - **✅ Complete CI/CD Pipeline**: Automated workflows for code quality, testing, training, and deployment
