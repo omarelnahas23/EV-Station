@@ -1,0 +1,193 @@
+version: '3.8'
+
+services:
+  # Main LLM API Service
+  ev-llm-api:
+    build:
+      context: .
+      dockerfile: deployment/Dockerfile
+      target: production
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_PATH=/app/models
+      - LLM_API_KEY=${LLM_API_KEY:-demo-api-key-12345}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - ENVIRONMENT=${ENVIRONMENT:-production}
+    volumes:
+      - ./models:/app/models:ro
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    networks:
+      - ev-network
+
+  # Development service (for local development)
+  ev-llm-dev:
+    build:
+      context: .
+      dockerfile: deployment/Dockerfile
+      target: development
+    ports:
+      - "8001:8000"
+    environment:
+      - MODEL_PATH=/app/models
+      - LLM_API_KEY=${LLM_API_KEY:-demo-api-key-12345}
+      - LOG_LEVEL=DEBUG
+      - ENVIRONMENT=development
+    volumes:
+      - .:/app
+      - ./models:/app/models
+    command: ["python", "-m", "uvicorn", "deployment.serve_model:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    networks:
+      - ev-network
+    profiles:
+      - dev
+
+  # Redis for caching and session management
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - ev-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # PostgreSQL for metadata and user management
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-ev_llm}
+      - POSTGRES_USER=${POSTGRES_USER:-ev_user}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-ev_password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+    restart: unless-stopped
+    networks:
+      - ev-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-ev_user}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Prometheus for monitoring
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+    networks:
+      - ev-network
+    profiles:
+      - monitoring
+
+  # Grafana for visualization
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning
+    restart: unless-stopped
+    networks:
+      - ev-network
+    profiles:
+      - monitoring
+
+  # Nginx reverse proxy and load balancer
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deployment/nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/nginx/ssl
+      - ./logs/nginx:/var/log/nginx
+    depends_on:
+      - ev-llm-api
+    restart: unless-stopped
+    networks:
+      - ev-network
+    profiles:
+      - production
+
+  # Model registry service (MLflow)
+  mlflow:
+    image: python:3.9-slim
+    ports:
+      - "5000:5000"
+    environment:
+      - MLFLOW_BACKEND_STORE_URI=postgresql://${POSTGRES_USER:-ev_user}:${POSTGRES_PASSWORD:-ev_password}@postgres:5432/${POSTGRES_DB:-ev_llm}
+      - MLFLOW_DEFAULT_ARTIFACT_ROOT=/mlflow/artifacts
+    volumes:
+      - mlflow_artifacts:/mlflow/artifacts
+      - ./scripts/start_mlflow.sh:/start_mlflow.sh
+    command: ["/bin/bash", "/start_mlflow.sh"]
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    networks:
+      - ev-network
+    profiles:
+      - mlops
+
+  # Data pipeline runner (for scheduled data collection)
+  data-pipeline:
+    build:
+      context: .
+      dockerfile: deployment/Dockerfile
+      target: development
+    environment:
+      - PYTHONPATH=/app
+      - LOG_LEVEL=INFO
+    volumes:
+      - .:/app
+      - ./data:/app/data
+    command: ["python", "orchestration/pipeline.py"]
+    networks:
+      - ev-network
+    profiles:
+      - pipeline
+
+networks:
+  ev-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:
+  prometheus_data:
+  grafana_data:
+  mlflow_artifacts: 
