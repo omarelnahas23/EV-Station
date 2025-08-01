@@ -7,26 +7,6 @@
 
 A comprehensive pipeline for collecting, processing, and fine-tuning large language models (LLMs) on electric vehicle (EV) charging domain data. This project enables the creation of domain-specific AI assistants with expertise in EV charging technology, infrastructure, and user behavior.
 
-
-### MLOps & CI/CD Implementation
-- **✅ Complete CI/CD Pipeline**: Automated workflows for code quality, testing, training, and deployment
-- **✅ Model Registry & Versioning**: MLflow integration for experiment tracking and model versioning
-- **✅ Production Monitoring**: Prometheus + Grafana dashboards with real-time metrics and alerting
-- **✅ Security & Compliance**: Automated PII scanning, vulnerability assessment, and license compliance
-- **✅ Multi-stage Deployment**: Docker containers with staging and production environments
-- **✅ Quality Gates**: Automated performance validation with configurable thresholds
-
-### Enhanced Deployment Features
-- **✅ API Authentication**: Secure endpoints with API key authentication and rate limiting
-- **✅ Health Monitoring**: Comprehensive health checks and endpoint monitoring
-- **✅ Lightweight Inference**: Optimized FastAPI service with minimal resource footprint
-- **✅ Auto-scaling Ready**: Container orchestration with Docker Compose profiles
-
-### Advanced Prompting Strategy
-- **✅ Structured Prompt Engineering**: Domain-optimized prompts for EV charging expertise
-- **✅ Long Context Handling**: Intelligent chunking and relevance filtering for large documents
-- **✅ Multi-model Integration**: Seamless switching between base and fine-tuned models
-
 ## 🌟 Features
 
 ### 🔍 **Multi-Source Data Collection**
