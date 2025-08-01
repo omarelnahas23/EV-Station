@@ -232,7 +232,7 @@ If you use this model in your research or applications, please cite:
   title={{EV Charging Domain-Specific Language Model}},
   author={{EV Charging LLM Pipeline Team}},
   year={{2024}},
-  url={{https://github.com/yourusername/ev-charging-llm-pipeline}},
+  url={{https://github.com/omarelnahas23/EV-Station}},
   note={{Fine-tuned Llama 3 7B model for electric vehicle charging domain}}
 }}
 ```
@@ -240,7 +240,7 @@ If you use this model in your research or applications, please cite:
 ## Contact and Support
 
 For questions, issues, or contributions:
-- **GitHub:** https://github.com/yourusername/ev-charging-llm-pipeline
+- **GitHub:** https://github.com/omarelnahas23/EV-Station
 - **Email:** contact@energyai.berlin
 - **Documentation:** See project README and documentation
 
