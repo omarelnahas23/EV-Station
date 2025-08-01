@@ -122,7 +122,7 @@ python inference_llama3.py --model_path ../models/llama3-7b-ev-charging-lora --i
 ## 📁 Project Structure
 
 ```
-ev-charging-llm-pipeline/
+EV-Station/
 ├── 📂 data_collection/           # Data collection and web scraping
 │   ├── collect_data.py          # Main data collection script
 │   ├── data/                    # Collected raw data
